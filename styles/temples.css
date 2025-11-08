@@ -38,32 +38,28 @@ header h1 {
 }
 
 /* Navigation styles */
-nav {
-    background-color: #2e8bc0;
-}
+
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 nav ul li {
-    text-align: center;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    display: block;
-    color: #ffffff;
+    color: #ecf0f1;
     text-decoration: none;
-    padding: 0.8rem;
+    padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #1a5f7a;
+    background-color: #34495e;
 }
 
 /* Main content styles */
