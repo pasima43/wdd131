@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #0077c8;
+    /* Blue from the flag */
+    --secondary-color: #fff;
+    /* White from the flag */
+    --accent-color: #f00;
+    /* Red from the flag */
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.data {
+    margin-top: 20px;
+}
+
+.weather {
+    margin-top: 20px;
+}
+
+.weather::after {
+    content: ' 🌦';
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #eee;
+    font-size: 0.8em;
+}
+
+/* Media Query for larger screens */
+@media screen and (min-width: 600px) {
+    main {
+        padding: 30px;
+    }
+
+    .data,
+    .weather {
+        margin-top: 30px;
+    }
+}
