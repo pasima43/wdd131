@@ -23,7 +23,8 @@
     <main>
         <section class="hero">
             <picture>
-                <source srcset="images/hero-small.webp 480w, images/hero-large.webp 800w" type="image/webp">
+                <source srcset="images/hero-small.webp 480w,images/hero-large.webp 800w" type="image/webp"
+                    sizes="(max-width: 600px) 480px, 800px">
                 <img src="images/hero-large.jpg"
                     alt="An eagle soaring high in strength against a backdrop of a clear blue sky with soft, wispy clouds.">
             </picture>
@@ -44,7 +45,8 @@
             <p>Temperature: <span id="temperature">29</span> °C</p>
             <p>Conditions: Partly Cloudy</p>
             <p>Wind: <span id="wind">29</span> km/h</p>
-            <p>Wind Chill: <span id="wind-chill"></span> °C</p>
+            <p>Wind Chill: <span id="wind-chill"><img src="images/110801_sun_icon.svg"
+                        alt="Bright sun with radiating rays depicting sunny weather conditions"></span></p>
         </section>
     </main>
     <footer>
