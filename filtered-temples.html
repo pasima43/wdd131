@@ -4,35 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>temple Album</title>
+    <title>temple Album - Filtered</title>
     <meta name="description"
-        content="Explore the significance of temples in various cultures and religions around the world. Learn about their history, architecture, and spiritual importance.">
+        content="Explore a curated selection of temples from around the world, highlighting their unique features and significance.">
     <meta name="author" content="Paschal Ezenwa">
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    <link rel="stylesheet" href="styles/filtered-temples.css" media="screen and (min-width: 801px)">
     <script src="scripts/filtered-temples.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="nav.css">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h5>Temple Album</h5>
+        <p>Temple Album</p>
         <nav>
             <ul>
-                <li><button id="home">Home</button></li>
-                <li><button id="old">Old</button></li>
-                <li><button id="new">New</button></li>
-                <li><button id="large">Large</button></li>
-                <li><button id="small">Small</button></li>
+                <li><a href="#"><button id="home">Home</button></a></li>
+                <li><a href="#"><button id="old">Old</button></a></li>
+                <li><a href="#"><button id="new">New</button></a></li>
+                <li><a href="#"><button id="large">Large</button></a></li>
+                <li><a href="#"><button id="small">Small</button></a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <h1>Temple Album</h1>
         <div id="temple-container"></div>
     </main>
-    <script src="script.js"></script>
+    <script src="scripts/script.js" defer></script>
 
     <footer>
         <p>&copy; <span id="currentyear">2024</span> Paschal Ezenwa, FCT Abuja, Nigeria</p>
