@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <meta name="description"
+        content="product review form for customers to provide feedback on their purchases and overall shopping experience.">
+    <meta name="author" content="Paschal Ezenwa">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 801px)">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Product Review</h1>
+    </header>
+
+    <main class="form-container">
+        <form method="get" action="review.html">
+            <fieldset class="form-section">
+                <legend>Product Details</legend>
+
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Choose a Product ...</option>
+                        <!-- Options will be populated dynamically by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Overall Rating</label>
+                    <div class="rating-group">
+                        <input type="radio" id="rating1" name="overallRating" value="1" required>
+                        <label for="rating1" aria-label="1 star rating">☆</label>
+
+                        <input type="radio" id="rating2" name="overallRating" value="2">
+                        <label for="rating2" aria-label="2 star rating">☆☆</label>
+
+                        <input type="radio" id="rating3" name="overallRating" value="3">
+                        <label for="rating3" aria-label="3 star rating">☆☆☆</label>
+
+                        <input type="radio" id="rating4" name="overallRating" value="4">
+                        <label for="rating4" aria-label="4 star rating">☆☆☆☆</label>
+
+                        <input type="radio" id="rating5" name="overallRating" value="5">
+                        <label for="rating5" aria-label="5 star rating">☆☆☆☆☆</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="installDate">Date of Installation</label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>Review Details</legend>
+
+                <div class="form-group">
+                    <p class="checkbox-legend">Which features did you find useful in the product? <br>(Check all that
+                        apply)</p>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="featureDurability" name="usefulFeatures" value="Durability">
+                        <label for="featureDurability">Durability</label>
+
+                        <input type="checkbox" id="featureEaseOfUse" name="usefulFeatures" value="Ease of Use">
+                        <label for="featureEaseOfUse">Ease of Use</label>
+
+                        <input type="checkbox" id="featurePerformance" name="usefulFeatures" value="Performance">
+                        <label for="featurePerformance">Performance</label>
+
+                        <input type="checkbox" id="featureDesign" name="usefulFeatures" value="Design">
+                        <label for="featureDesign">Design</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="writtenReview">Written Review (Optional)</label>
+                    <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" name="userName">
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear">2024</span> Paschal Ezenwa, FCT Abuja, Nigeria</p>
+        <p id="lastModified">Last modified:01/11/2025 11:12:44 </p>
+    </footer>
+</body>
+
+</html>

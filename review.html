@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+    <meta name="description"
+        content="express gratitude to customers for submitting product reviews and display the total number of reviews submitted by the user.">
+    <meta name="author" content="Paschal Ezenwa">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 801px)">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Thank You For Your Review!</h1>
+    </header>
+
+    <main class="confirmation-container">
+        <p>Your review has been successfully submitted.</p>
+        <p>Total reviews submitted by you so far: <span id="reviewCounter">0</span></p>
+        <p><a href="index.html" class="back-link">Submit another review</a></p>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear">2024</span> Paschal Ezenwa, FCT Abuja, Nigeria</p>
+        <p id="lastModified">Last modified:01/11/2025 11:12:44 </p>
+    </footer>
+    <script>
+        // This script runs on the review.html page to handle the counter
+        document.addEventListener('DOMContentLoaded', () => {
+            let reviewCount = localStorage.getItem('reviewCount');
+            reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+            localStorage.setItem('reviewCount', reviewCount);
+            document.getElementById('reviewCounter').textContent = reviewCount;
+        });
+    </script>
+</body>
+
+</html>

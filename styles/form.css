@@ -1,0 +1,295 @@
+/* Basic Resets & Body Styling */
+:root {
+    --primary-bg: #f8f8f8;
+    --secondary-bg: #e2dce6;
+    /* Light purple from image */
+    --accent-color: #6a0572;
+    /* Dark purple from image */
+    --text-color: #333;
+    --border-color: #ccc;
+    --button-bg: #6a0572;
+    --button-text: #fff;
+    --footer-bg: #3d0342;
+    /* Darker purple for footer */
+    --footer-text: #f0f0f0;
+    --star-color: #ffc107;
+    /* Gold for selected stars */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.page-header {
+    background-color: var(--accent-color);
+    color: var(--button-text);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Form Container */
+.form-container,
+.confirmation-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Fieldset and Legend for grouping */
+.form-section {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-section legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    padding: 0 0.5rem;
+}
+
+/* Form Groups for labels and inputs */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 20px);
+    /* Account for padding */
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Include padding in width */
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(106, 5, 114, 0.2);
+}
+
+/* Rating Group (Radio Buttons) */
+.rating-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.rating-group input[type="radio"] {
+    display: none;
+    /* Hide default radio button */
+}
+
+.rating-group label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--border-color);
+    /* Unselected star color */
+    margin-bottom: 0;
+    /* Override default label margin */
+    transition: color 0.2s ease-in-out;
+}
+
+.rating-group label:hover {
+    color: var(--star-color);
+    /* Hover color */
+}
+
+/* Visually show selected star rating */
+.rating-group input[type="radio"]:checked~label {
+    color: var(--star-color);
+    /* Color for selected and subsequent stars */
+}
+
+/* To make only the specific star glow as in the image (cumulative effect) */
+.rating-group input[type="radio"]:checked+label {
+    color: var(--star-color);
+}
+
+/* Checkbox Group */
+.checkbox-legend {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    /* Custom checkbox styling if desired */
+    accent-color: var(--accent-color);
+    /* Changes checkbox color */
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    /* Override bold from .form-group label */
+    margin-bottom: 0;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+    /* Limit button width on desktop */
+    align-self: center;
+    /* Center the button */
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #55045a;
+    /* Slightly darker purple on hover */
+}
+
+/* Confirmation Page Specifics */
+.confirmation-container {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.confirmation-container p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.confirmation-container #reviewCounter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #55045a;
+}
+
+/* Footer Styling */
+.common-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.common-footer p {
+    margin: 0.5rem 0;
+}
+
+.flower-icon {
+    font-size: 1.1em;
+    vertical-align: middle;
+    margin: 0 0.2em;
+    color: #ff69b4;
+    /* Pink color for the flower */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    .form-container,
+    .confirmation-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+
+    .form-section legend {
+        font-size: 1.1rem;
+    }
+
+    .rating-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .rating-group label {
+        font-size: 1.3rem;
+    }
+
+    input[type="submit"] {
+        max-width: 100%;
+    }
+}
