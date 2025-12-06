@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pasima Assets Global Limited</title>
+    <meta name="description" content="Contact Pasima Assets Global Limited.">
+    <meta name="author" content="Paschal Ezenwa">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles/contact.css">
+
+    <!-- Scripts -->
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/pasima assets logo.jpg" alt="Pasima Assets Global Limited Logo">
+                <span>Pasima Assets Global Limited</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="contact">
+                <h2>Contact Us</h2>
+
+                <!-- Contact Form -->
+                <form action="submit_form.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number">
+
+                    <select name="subject" title="Select inquiry subject">
+                        <option value="">Select a Subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="investment">Investment Opportunities</option>
+                        <option value="support">Technical Support</option>
+                    </select>
+
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong> 123 Crypto Street, Digital City, 12345</p>
+                    <p><strong>Email:</strong> pasimaassetsgloballimited@gmail.com</p>
+                    <p><strong>Phone:</strong> +234809387094</p>
+
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Pasima Assets Global Limited. All rights reserved.</p>
+        </footer>
+</body>
+
+</html>
