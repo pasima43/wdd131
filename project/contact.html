@@ -27,59 +27,54 @@
                 <img src="images/pasima assets logo.jpg" alt="Pasima Assets Global Limited Logo">
                 <span>Pasima Assets Global Limited</span>
             </div>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
 
-        <main>
-            <section id="contact">
-                <h2>Contact Us</h2>
+            <!-- Contact Form -->
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
 
-                <!-- Contact Form -->
-                <form action="submit_form.php" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="tel" name="phone" placeholder="Phone Number">
+                <select name="subject" title="Select inquiry subject">
+                    <option value="">Select a Subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="investment">Investment Opportunities</option>
+                    <option value="support">Technical Support</option>
+                </select>
 
-                    <select name="subject" title="Select inquiry subject">
-                        <option value="">Select a Subject</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="investment">Investment Opportunities</option>
-                        <option value="support">Technical Support</option>
-                    </select>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
 
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Address:</strong> 123 Crypto Street, Digital City, 12345</p>
+                <p><strong>Email:</strong> pasimaassetsgloballimited@gmail.com</p>
+                <p><strong>Phone:</strong> +234809387094</p>
 
-                <!-- Contact Information -->
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><strong>Address:</strong> 123 Crypto Street, Digital City, 12345</p>
-                    <p><strong>Email:</strong> pasimaassetsgloballimited@gmail.com</p>
-                    <p><strong>Phone:</strong> +234809387094</p>
-
-                    <div class="social-links">
-                        <a href="#" target="_blank">Facebook</a>
-                        <a href="#" target="_blank">Twitter</a>
-                        <a href="#" target="_blank">LinkedIn</a>
-                    </div>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">LinkedIn</a>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2025 Pasima Assets Global Limited. All rights reserved.</p>
-        </footer>
+    <footer>
+        <p>&copy; 2025 Pasima Assets Global Limited. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
